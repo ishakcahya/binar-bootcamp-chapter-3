@@ -1,3 +1,3 @@
 package data
 
-abstract class Versi(val name: String) // ABSTRACT CLASS
+abstract class Versi(val name: String)                                             // ABSTRACT CLASS

@@ -1,54 +1,58 @@
 package id.ishakcahya.binarbootcampchapter3
 
-import data.Hasil
-import data.Version
+import data.*
 
-private val judul = "game suit " // ACCESS MODIFIER, ENCAPSULATION
+private val awalJudul = "game suit"                                // ACCESS MODIFIER, ENCAPSULATION
 
-val cetakJudul = 'B' // PRIMITIVE DATA TYPE
+val cetakAwalJudul: String = "B"
 
-private val subJudul = "terminal "
+private val tengahJudul: String = "terminal"                           // REFERENCE DATA TYPE STRING
 
-val cetakSubJudul = 'C'
+val cetakTengahJudul: Char = 'C'                                         // PRIMITIVE DATA TYPE CHAR
 
 private val akhirJudul = Version("version")
 
 fun main() {
 
-    val pemain1 = "gunTING" // VARIABLE, REFERENCE DATA TYPE
-    val pemain2 = "BAtu"
+    val pemain1 = "gunting"                                                              // VARIABLE
+    val pemain2 = "BATU"
 
-    val hasil = Hasil(pemain1.lowercase(), pemain2.lowercase()) // OBJECT
-
-    var i = 0
-    while (i < 26) { // WHILE LOOPING
+    val hasil = Hasil(pemain1.lowercase(), pemain2.lowercase())                            // OBJECT
+                                                                     // EXCEPTION HANDLING CAPS LOCK
+    for (i in 0 until 26) {                                                        // FOR LOOP
         print("=")
-        i++
     }
+
     println()
 
-    when (cetakJudul) { // WHEN EXPRESSION
-        'A' -> {
-            print(judul)
+    when (cetakAwalJudul) {                                                       // WHEN EXPRESSION
+        "A" -> {
+            print(awalJudul)
         }
-        'B' -> {
-            print(judul.uppercase())
+        "B" -> {
+            print(awalJudul.uppercase())
         }
         else -> {
             println("Judulnya salah!")
         }
     }
 
-    if (cetakSubJudul == 'C') { // IF EXPRESSION
-        print(subJudul.uppercase())
+    var contohPoli = Poli("")
+    contohPoli.printSpasi()
+
+    if (cetakTengahJudul == 'C') {                                                  // IF EXPRESSION
+        print(tengahJudul.uppercase())
     } else {
         println("Judulnya masih salah!")
     }
 
+    contohPoli = Polidua("")                                                   // POLYMORPHISM
+    contohPoli.printSpasi()
+
     println(akhirJudul.name.uppercase())
 
     var j = 0
-    do { // DO WHILE LOOPING
+    do {                                                                            // DO WHILE LOOP
         print("==")
         j++
     } while (j < 13)
