@@ -1,13 +1,13 @@
 package data
 
-interface Game { // INTERFACE
+interface Game {                                                                        // INTERFACE
 
-    val masukkanPemain1: String // PROPERTIES
+    val masukkanPemain1: String                                                        // PROPERTIES
 
     val masukkanPemain2: String
 
-    fun hasilGame() { // FUNCTION, METHOD
-        if (masukkanPemain1 == "batu" && masukkanPemain2 == "gunting") { // IF ELSE EXPRESSION
+    fun hasilGame() {                                                            // FUNCTION, METHOD
+        if (masukkanPemain1 == "batu" && masukkanPemain2 == "gunting") {       // IF ELSE EXPRESSION
             println("Pemain 1 MENANG!")
         } else if (masukkanPemain1 == "batu" && masukkanPemain2 == "kertas") {
             println("Pemain 2 MENANG!")
@@ -22,7 +22,7 @@ interface Game { // INTERFACE
         } else if (masukkanPemain1 == masukkanPemain2) {
             println("DRAW")
         } else {
-            println("Game belum dimulai!")
+            println("Game belum dimulai.\nMasukkan pilihan yang benar!")
         }
     }
 }
